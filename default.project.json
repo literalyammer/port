@@ -8,8 +8,9 @@
 		"$className": "DataModel",
 		"ServerScriptService": {
 			"$className": "ServerScriptService",
+			"$ignoreUnknownInstances": true,
 			"TS": {
-				"$path": "out"
+				"$path": "out/PORTMainModule"
 			}
 		},
 		"ReplicatedStorage": {
