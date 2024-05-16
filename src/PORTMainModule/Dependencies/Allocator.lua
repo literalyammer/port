@@ -11,6 +11,7 @@ local function checkLegacyValue(elevator, name)
 end
 
 function module:findElevator(elevators: {}, callFloor: number, destinationCall: number)
+	print("Elevators" .. tostring(elevators) .. "CallFloor:" .. tostring(callFloor) .. "Dest" .. tostring(destinationCall))
 	local CALL_DIRECTION = destinationCall > callFloor and 1 or destinationCall < callFloor and -1 or 0
 	local CALL_DIRECTION_STR = destinationCall > callFloor and 'U' or destinationCall < callFloor and 'D' or 'N'
 	local availableElevators = {}
