@@ -1,6 +1,6 @@
 import { findElevator } from "./Dependencies/Allocator";
 export = function (model: Model, settings: ModuleScript, logic: string[]) {
-	if(typeOf(logic[1]) === "table") {const branch = logic[1]} else { const branch = "STABLE"}
+	const branch = Array
 	const elevators = model.FindFirstChild("Elevators")
 	
 	if (!elevators) {print("No Elevators Found! Please add them to the model."); return;}
