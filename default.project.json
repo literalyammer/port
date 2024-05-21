@@ -10,7 +10,7 @@
 			"$className": "ServerScriptService",
 			"$ignoreUnknownInstances": true,
 			"TS": {
-				"$path": "out/PORTMainModule"
+				"$path": "out"
 			}
 		},
 		"ReplicatedStorage": {
