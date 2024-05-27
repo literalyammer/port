@@ -1,0 +1,22 @@
+{
+	"name": "port",
+	"version": "0.0.0-development",
+	"description": "The code for the model of port Systems",
+	"scripts": {
+		"build": "rbxtsc",
+		"watch": "rbxtsc -w"
+	},
+	"keywords": [],
+	"author": "",
+	"devDependencies": {
+		"@rbxts/compiler-types": "2.3.0-types.0",
+		"@rbxts/types": "^1.0.764",
+		"roblox-ts": "^2.3.0",
+		"typescript": "^5.3.3",
+		"@gxplus/types": "workspace:*"
+	},
+	"dependencies": {
+		"@rbxts/t": "^3.1.1",
+		"@gxplus/network": "workspace:*"
+	}
+}

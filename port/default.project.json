@@ -7,20 +7,21 @@
 	"tree": {
 		"$className": "DataModel",
 		"ServerScriptService": {
-			"$className": "ServerScriptService",
-			"$ignoreUnknownInstances": true,
-			"TS": {
-				"$path": "out"
+			"PORTMainModule": {
+				"$className": "ModuleScript",
+				"$path": "out/backend"
 			}
 		},
-		"ReplicatedStorage": {
-			"$className": "ReplicatedStorage",
-			"rbxts_include": {
+		"ReplicatedStorage":{
+			"include": {
 				"$path": "include",
 				"node_modules": {
 					"$className": "Folder",
 					"@rbxts": {
 						"$path": "node_modules/@rbxts"
+					},
+					"@gxplus": {
+						"$path": "node_modules/@gxplus"
 					}
 				}
 			}

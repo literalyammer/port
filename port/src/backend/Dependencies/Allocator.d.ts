@@ -1,0 +1,1 @@
+export function findElevator(origin: Model, elevators: any[], callFloor: number, destinationCall: number): Model;
