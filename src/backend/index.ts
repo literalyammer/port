@@ -1,7 +1,7 @@
 import { CollectionService } from "@rbxts/services";
 import Lantern from "./Logic/Lantern";
 import PORTRegular from "./Logic/PORTRegular";
-export = function (model: Model, settings: ModuleScript, logic: string[]) {
+export = (model: Model, settings: ModuleScript, logic: string[]) => {
 	const elevators = model.FindFirstChild("Elevators");
 
 	if (!elevators) {
@@ -9,10 +9,11 @@ export = function (model: Model, settings: ModuleScript, logic: string[]) {
 		return;
 	}
 	if (logic[0] === "FULL") {
-		const Panels = model.FindFirstChild("Panels")! as Model;
+		assert(model.FindFirstChild("Panels") as Model, "dawg there aint no panels")
+		const Panels = model.FindFirstChild("Panels") as Model;
 		const Lanterns = model.FindFirstChild("Lanterns") as Model;
 		if (Panels !== undefined) {
-			for (const v of Panels.GetDescendants()!) {
+			for (const v of Panels.GetDescendants()) {
 				if (v.Name === "Config" && v.IsA("ModuleScript")) {
 					const config = v;
 					PORTRegular(5, Panels, v);
