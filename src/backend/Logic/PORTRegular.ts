@@ -1,5 +1,5 @@
-export = (model: Model, panels: Instance[], c: ModuleScript) => {
-	
-	print(b.Name);
-	print(c.Name);
-};
+const panelID = math.random(0, 1e5);
+
+export function Start(panel: Model, config: ModuleScript) {
+	panel.SetAttribute("panelID", panelID);
+}
