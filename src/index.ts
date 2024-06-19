@@ -3,7 +3,10 @@ import Lantern from "./Logic/Lantern";
 import { Start } from "./Logic/PORTRegular";
 interface Logic {
 	BUILD: string;
-	OS: string;
+	VER: {
+		PANEL: string;
+		FIRMWARE: string;
+	};
 }
 
 export = (model: Model, settings: ModuleScript, logic: Logic) => {
