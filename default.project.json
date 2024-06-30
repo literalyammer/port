@@ -1,17 +1,14 @@
 {
 	"name": "PORT-test",
-	"globIgnorePaths": [
-		"**/package.json",
-		"**/tsconfig.json"
-	],
+	"globIgnorePaths": ["**/package.json", "**/tsconfig.json"],
 	"tree": {
 		"$className": "DataModel",
 		"ServerScriptService": {
 			"PORTMainModule": {
-				"$path": "out/backend"
+				"$path": "out/PORTMainModule"
 			}
 		},
-		"ReplicatedStorage":{
+		"ReplicatedStorage": {
 			"include": {
 				"$path": "include",
 				"node_modules": {
