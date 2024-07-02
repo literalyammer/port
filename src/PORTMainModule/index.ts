@@ -1,4 +1,4 @@
-import { CollectionService } from "@rbxts/services";
+import { CollectionService, HttpService } from "@rbxts/services";
 import LStart from "./Logic/LStart";
 import { Start } from "./Logic/PORTRegular";
 import type { Lantern, PORTModel } from "../../types/types";
@@ -15,6 +15,11 @@ export = (model: PORTModel, settings: ModuleScript, logic: Logic) => {
 	assert(elevators, "No Elevators Found Please add them to the model.");
 
 	if (logic.BUILD === "FULL") {
+		const API = new Instance("BindableEvent");
+		API.Parent = model;
+		API.Name = "PORT_API";
+		const ID =
+			model.GetAttribute("IDENT") ?? `PORT_${HttpService.GenerateGUID(false)}`;
 		const Panels = model.Panels;
 		const Lanterns = model.Lanterns;
 		for (const v of Panels.GetDescendants()) {
